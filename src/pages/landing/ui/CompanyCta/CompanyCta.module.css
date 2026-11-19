@@ -1,0 +1,44 @@
+/* Блок y 2316…2588 (272 px), радиус 40, отступы 52 / 48 / 32; после него 43 px до подвала. */
+.section {
+  padding-bottom: 43px;
+}
+
+.panel {
+  min-height: 272px;
+  padding: 52px var(--space-48) var(--space-32);
+  border-radius: var(--radius-40);
+  background: var(--color-primary-light);
+}
+
+.title {
+  font-size: var(--font-size-32);
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.text {
+  margin-top: var(--space-24);
+  font-size: var(--font-size-16);
+  line-height: 24px;
+}
+
+.button {
+  min-width: 264px;
+  margin-top: var(--space-24);
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: var(--space-32) var(--space-24);
+  }
+
+  .title {
+    font-size: var(--font-size-24);
+    line-height: 30px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: 0;
+  }
+}
