@@ -1,0 +1,26 @@
+/*
+ * Карточка шага (Figma 111:38): фон страницы, радиус 28, отступы 28, gap 12.
+ * Размеры шрифта 26 и 18 в шкале токенов font-size отсутствуют — взяты из макета как есть.
+ */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: 28px;
+  border-radius: var(--radius-28);
+  background: var(--color-bg-page);
+  text-align: left;
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.125;
+}
+
+.description {
+  color: var(--color-text-secondary);
+  font-size: 18px;
+  line-height: 1.5;
+}
