@@ -6,12 +6,9 @@
  * Правило: в стилях компонентов используем ТОЛЬКО эти переменные.
  * Менять значения здесь только после изменения в Figma.
  *
- * Сверено с Figma (get_variable_defs по лендингу): color/bg/*, color/border/*,
- * color/primary/*, color/text/{primary,secondary,muted}, color/dark/{900,800},
- * color/status/warning, space/{12,16,24,48}.
- * Остальное взято из записи проекта и в Figma ещё не пересверялось:
- * color/text/inverse, color/dark/700, color/status/{success,danger},
- * space/{4,8,32,64,80}, radius/*, font-size/*.
+ * Полностью сверено с Figma 2026-11-19 (коллекция Tasker Tokens, 41 токен).
+ * В коллекции есть ещё безымянные переменные «Color», «Color 2…5» и «кнопка одобрена»
+ * (#d8f5d9) — это черновики, в код не переносятся, пока их не переименуют.
  */
 :root {
   /* color/bg */
@@ -39,9 +36,10 @@
   --color-dark-700: #54446f;
 
   /* color/status */
-  --color-status-success: #16a34a;
+  --color-status-success: #72b761;
   --color-status-warning: #ebdc67;
-  --color-status-danger: #dc2626;
+  --color-status-danger: #c74a4a;
+  --color-status-neutral: #74688d;
 
   /* space */
   --space-4: 4px;

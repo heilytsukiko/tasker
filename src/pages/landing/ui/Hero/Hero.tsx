@@ -1,4 +1,5 @@
 import { routes } from '@/shared/config/routes';
+import { findAsset } from '@/shared/lib/assets';
 import { Chip, LinkButton } from '@/shared/ui';
 import { Container } from '@/shared/ui/Container';
 import styles from './Hero.module.css';
@@ -40,7 +41,7 @@ export function Hero() {
           </div>
         </div>
 
-        <HeroCard />
+        <HeroCard imageSrc={findAsset('hero-coffee')} avatarSrc={findAsset('hero-company-avatar')} />
       </Container>
     </section>
   );

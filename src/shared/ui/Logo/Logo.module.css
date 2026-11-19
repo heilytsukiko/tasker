@@ -4,7 +4,13 @@
   gap: var(--space-12);
 }
 
-/* TODO: заменить на экспортированный из Figma знак логотипа (32×32). */
+.markImage {
+  flex: none;
+  width: 32px;
+  height: 32px;
+}
+
+/* Запасной знак, если нет файла logo-mark */
 .mark {
   display: grid;
   place-items: center;

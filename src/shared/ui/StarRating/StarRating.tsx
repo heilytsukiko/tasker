@@ -11,7 +11,8 @@ interface StarRatingProps {
 
 const STAR_PATH = 'M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z';
 
-// TODO: заменить на SVG звёзд из Figma, когда ассеты будут экспортированы.
+// Звёзды рисуются кодом, а не картинкой: оценка бывает разной (кабинеты, отзывы).
+// Форма звезды — стандартная; при желании заменить path на контур из Figma.
 export function StarRating({ value, size = 14, className }: StarRatingProps) {
   const filledCount = Math.round(Math.min(5, Math.max(0, value)));
   const label = `Оценка ${value.toLocaleString('ru-RU')} из 5`;
