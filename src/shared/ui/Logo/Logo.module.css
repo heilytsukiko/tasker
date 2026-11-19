@@ -1,0 +1,26 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* TODO: заменить на экспортированный из Figma знак логотипа (32×32). */
+.mark {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-8);
+  background: var(--color-primary-default);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-16);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.text {
+  font-size: var(--font-size-24);
+  font-weight: 700;
+  line-height: 1.125;
+  color: var(--color-text-primary);
+}

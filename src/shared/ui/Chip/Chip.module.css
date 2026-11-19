@@ -1,0 +1,16 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+  white-space: nowrap;
+}
+
+.neutral {
+  color: var(--color-text-primary);
+}
+
+.primary {
+  color: var(--color-primary-default);
+}

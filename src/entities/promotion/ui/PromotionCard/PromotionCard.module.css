@@ -1,0 +1,60 @@
+/* Карточка по макету: 411×366, радиус 28, отступы 24 / 24 / 36. */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-16);
+  min-height: 366px;
+  padding: var(--space-24) var(--space-24) 36px;
+  border-radius: var(--radius-28);
+  background: var(--color-bg-surface);
+}
+
+.address {
+  align-self: flex-start;
+  padding: 6px var(--space-12);
+  font-size: var(--font-size-16);
+  line-height: 18px;
+}
+
+.body {
+  height: 144px;
+  overflow: hidden;
+}
+
+.company {
+  margin-bottom: var(--space-12);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+  line-height: 12px;
+}
+
+.title,
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.title {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  font-size: var(--font-size-24);
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  margin-top: var(--space-16);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-16);
+  line-height: 22px;
+}
+
+.reward {
+  height: 32px;
+  font-size: var(--font-size-16);
+}

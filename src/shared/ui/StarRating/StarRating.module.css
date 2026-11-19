@@ -1,0 +1,16 @@
+.stars {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.star {
+  flex: none;
+}
+
+.filled {
+  fill: var(--color-status-warning);
+}
+
+.empty {
+  fill: var(--color-border-default);
+}

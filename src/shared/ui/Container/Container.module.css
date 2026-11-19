@@ -1,0 +1,12 @@
+/*
+ * Контент 1280 px по центру. На макете 1440 боковые поля = 80 px (5,56 %);
+ * на узких экранах поля сжимаются до 16 px.
+ */
+.container {
+  --gutter: clamp(16px, 5.5556vw, 80px);
+
+  width: 100%;
+  max-width: calc(1280px + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}

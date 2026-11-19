@@ -1,0 +1,11 @@
+.footer {
+  min-height: 107px;
+  padding-top: 46px;
+  background: var(--color-bg-surface);
+}
+
+.copyright {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-14);
+  line-height: 1.125;
+}
