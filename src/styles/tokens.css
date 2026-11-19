@@ -1,0 +1,76 @@
+/*
+ * Дизайн-токены Tasker.
+ * Зеркало коллекции переменных Figma «Tasker Tokens» (файл Tasker, 40 токенов).
+ * Имя переменной = путь токена в Figma: color/bg/surface → --color-bg-surface.
+ *
+ * Правило: в стилях компонентов используем ТОЛЬКО эти переменные.
+ * Менять значения здесь только после изменения в Figma.
+ *
+ * Сверено с Figma (get_variable_defs по лендингу): color/bg/*, color/border/*,
+ * color/primary/*, color/text/{primary,secondary,muted}, color/dark/{900,800},
+ * color/status/warning, space/{12,16,24,48}.
+ * Остальное взято из записи проекта и в Figma ещё не пересверялось:
+ * color/text/inverse, color/dark/700, color/status/{success,danger},
+ * space/{4,8,32,64,80}, radius/*, font-size/*.
+ */
+:root {
+  /* color/bg */
+  --color-bg-surface: #ffffff;
+  --color-bg-page: #f5f3ff;
+  --color-bg-subtle: #ede8fb;
+
+  /* color/border */
+  --color-border-default: #e0d8f5;
+  --color-border-strong: #ddd6ef;
+
+  /* color/primary */
+  --color-primary-default: #7c3aed;
+  --color-primary-light: #c4b5fd;
+
+  /* color/text */
+  --color-text-primary: #1e1b4b;
+  --color-text-secondary: #66617d;
+  --color-text-muted: #74688d;
+  --color-text-inverse: #ffffff;
+
+  /* color/dark */
+  --color-dark-900: #29204b;
+  --color-dark-800: #362b59;
+  --color-dark-700: #54446f;
+
+  /* color/status */
+  --color-status-success: #16a34a;
+  --color-status-warning: #ebdc67;
+  --color-status-danger: #dc2626;
+
+  /* space */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* radius */
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-28: 28px;
+  --radius-40: 40px;
+  --radius-full: 999px;
+
+  /* font-size */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-20: 20px;
+  --font-size-24: 24px;
+  --font-size-32: 32px;
+  --font-size-48: 48px;
+
+  /* font-family/base */
+  --font-family-base: 'Sansation', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
