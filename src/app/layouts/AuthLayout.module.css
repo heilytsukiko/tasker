@@ -1,0 +1,17 @@
+/*
+ * Фон страниц входа и регистрации: градиент (сверху primary/light, снизу почти белый)
+ * и волнистые линии из макета (файл src/assets/auth-background.png).
+ * Градиент работает и без файла.
+ */
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-24) var(--space-16);
+  background-color: var(--color-bg-page);
+  background-image: linear-gradient(180deg, var(--color-primary-light) 0%, var(--color-bg-page) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

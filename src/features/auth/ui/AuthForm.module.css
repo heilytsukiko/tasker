@@ -1,0 +1,44 @@
+/* Общие стили форм входа и регистрации. Шаг между полями 21 px — как в макете (поля на y 305, 388, 471). */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+/* Кнопки 230 px по центру, в макете шрифт обычный (не жирный) */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.actions .action {
+  width: 230px;
+  max-width: 100%;
+  height: 44px;
+  border-radius: var(--radius-16);
+  font-weight: 400;
+}
+
+.actions .secondaryAction {
+  border-color: transparent;
+}
+
+/* Когда список ролей раскрыт, кнопки стоят ближе (8 px, как в макете) */
+.form:has([aria-expanded='true']) .actions {
+  margin-top: -16px;
+}
+
+.formError {
+  color: var(--color-status-danger);
+  font-size: var(--font-size-14);
+  line-height: 18px;
+  text-align: center;
+}

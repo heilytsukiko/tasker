@@ -1,0 +1,41 @@
+/* Поле по макету авторизации: подпись 12 px, поле высотой 42, радиус 16, мягкая фиолетовая тень. */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-12);
+  line-height: 14px;
+}
+
+.input {
+  width: 100%;
+  height: 42px;
+  padding: 0 var(--space-16);
+  border: 1px solid transparent;
+  border-radius: var(--radius-16);
+  background: var(--color-bg-surface);
+  box-shadow: 0 2px 14px color-mix(in srgb, var(--color-primary-default) 12%, transparent);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-16);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus-visible {
+  border-color: var(--color-primary-default);
+}
+
+.input[aria-invalid='true'] {
+  border-color: var(--color-status-danger);
+}
+
+.error {
+  color: var(--color-status-danger);
+  font-size: var(--font-size-12);
+  line-height: 14px;
+}

@@ -8,4 +8,6 @@
 | `hero-coffee` | фото в карточке hero | слой `image 1` (83:3), исходное фото целиком, PNG/JPG |
 | `hero-company-avatar` | аватар «Coffee boom» 48×48 | слой `Vector` (67:82), PNG @2x |
 
+Уже добавлено: `auth-background.png` — фон страниц входа и регистрации (градиент с волнами).
+
 Положите файлы прямо в эту папку (`src/assets/`).
