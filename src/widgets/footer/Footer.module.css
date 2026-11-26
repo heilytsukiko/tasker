@@ -1,7 +1,13 @@
+/* Текст по центру по вертикали: подвал лендинга 107 px, подвал каталога 96 px. */
 .footer {
+  display: flex;
+  align-items: center;
   min-height: 107px;
-  padding-top: 46px;
   background: var(--color-bg-surface);
+}
+
+.compact {
+  min-height: 96px;
 }
 
 .copyright {

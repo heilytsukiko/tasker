@@ -1,0 +1,40 @@
+/*
+ * Переключатель по макету: фон bg/subtle, отступ 5, зазор 4, пункты 20 / 10.
+ * Размер шрифта 15 px в шкале токенов отсутствует — взят из макета.
+ */
+.root {
+  display: inline-flex;
+  gap: 4px;
+  padding: 5px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+}
+
+.option {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.option:hover:not(.active) {
+  background: color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--color-primary-default);
+  outline-offset: 2px;
+}
+
+.active {
+  background: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+}

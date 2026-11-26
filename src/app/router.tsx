@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { CatalogPage } from '@/pages/catalog';
 import { LandingPage } from '@/pages/landing';
 import { LoginPage } from '@/pages/login';
 import { NotFoundPage } from '@/pages/not-found';
@@ -14,11 +15,15 @@ import { MainLayout } from './layouts/MainLayout';
  */
 export const router = createBrowserRouter([
   {
-    element: <MainLayout />,
+    element: <MainLayout variant="landing" />,
     children: [
       { path: routes.home, element: <LandingPage /> },
       { path: '*', element: <NotFoundPage /> },
     ],
+  },
+  {
+    element: <MainLayout variant="compact" />,
+    children: [{ path: routes.promotions, element: <CatalogPage /> }],
   },
   {
     element: <AuthLayout />,

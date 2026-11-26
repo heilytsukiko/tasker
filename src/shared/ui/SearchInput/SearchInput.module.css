@@ -1,0 +1,31 @@
+/*
+ * Поле поиска по макету каталога: пилюля, отступы 14 / 20, рамка 1 px.
+ * Цвет рамки в макете #d9d3e8 — ближайший токен border/strong (#ddd6ef).
+ */
+.input {
+  width: 100%;
+  padding: 14px 20px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-full);
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font: inherit;
+  font-size: var(--font-size-16);
+  line-height: 1.4;
+  outline: none;
+  appearance: none;
+  transition: border-color 0.15s ease;
+}
+
+.input::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+
+.input:focus-visible {
+  border-color: var(--color-primary-default);
+}
+
+.input::-webkit-search-cancel-button {
+  appearance: none;
+}

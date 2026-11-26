@@ -1,1 +1,1 @@
-export { Footer } from './Footer';
+export { Footer, type FooterVariant } from './Footer';

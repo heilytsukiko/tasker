@@ -1,7 +1,5 @@
 .header {
-  height: 80px;
   background: var(--color-bg-surface);
-  border-bottom: 1px solid var(--color-border-default);
 }
 
 .inner {
@@ -41,10 +39,12 @@
   min-width: 136px;
 }
 
-/*
- * Макет 1440: логотип | меню начинается на x=560 (480 px от левого поля) | кнопки справа.
- * Бургер-меню для узких экранов — отдельная задача.
- */
+/* --- Шапка лендинга: высота 80, линия снизу, меню по центру --- */
+.landing {
+  height: 80px;
+  border-bottom: 1px solid var(--color-border-default);
+}
+
 @media (min-width: 900px) {
   .nav {
     display: flex;
@@ -53,12 +53,23 @@
   }
 }
 
-/* Фиксированная колонка 480 помещается только на широких экранах */
+/* Макет 1440: меню начинается на x=560 (480 px от левого поля). Помещается только на широких экранах. */
 @media (min-width: 1280px) {
-  .inner {
+  .landing .inner {
     display: grid;
     grid-template-columns: 480px 1fr auto;
   }
+}
+
+/* --- Компактная шапка (каталог): высота 104, без меню, зазор между кнопками 24 --- */
+.compact {
+  --logo-gap: 9px;
+
+  height: 104px;
+}
+
+.compact .actions {
+  gap: var(--space-24);
 }
 
 @media (max-width: 480px) {

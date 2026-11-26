@@ -1,0 +1,93 @@
+/*
+ * Каталог по макету 1440 (Figma 55:2):
+ *   шапка 104 → блок фильтров (поля 20 / 32, заголовок 48 px) → фиолетовый список (поля 32 / 40) → подвал 96.
+ */
+.intro {
+  padding: 20px 0 32px;
+  background: var(--color-bg-surface);
+}
+
+.introInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.title {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-48);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.search {
+  flex: 1;
+  min-width: 0;
+}
+
+.list {
+  padding: 32px 0 40px;
+  background: var(--color-bg-subtle);
+}
+
+.listInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* Размер 23 px в шкале токенов отсутствует — взят из макета */
+.listTitle {
+  color: var(--color-text-primary);
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-24);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.empty {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-16);
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: var(--font-size-32);
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filters > :last-child {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

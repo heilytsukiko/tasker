@@ -3,6 +3,10 @@ export type { ButtonProps, LinkButtonProps, ButtonSize, ButtonVariant } from './
 export { Chip } from './Chip';
 export { Container } from './Container';
 export { Logo } from './Logo';
+export { SearchInput } from './SearchInput';
+export type { SearchInputProps } from './SearchInput';
+export { SegmentedControl } from './SegmentedControl';
+export type { SegmentedOption } from './SegmentedControl';
 export { StarRating } from './StarRating';
 export { TextField } from './TextField';
 export type { TextFieldProps } from './TextField';

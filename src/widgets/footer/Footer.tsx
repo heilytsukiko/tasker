@@ -1,9 +1,16 @@
+import { cn } from '@/shared/lib/cn';
 import { Container } from '@/shared/ui/Container';
 import styles from './Footer.module.css';
 
-export function Footer() {
+export type FooterVariant = 'landing' | 'compact';
+
+interface FooterProps {
+  variant?: FooterVariant;
+}
+
+export function Footer({ variant = 'landing' }: FooterProps) {
   return (
-    <footer className={styles.footer}>
+    <footer className={cn(styles.footer, variant === 'compact' && styles.compact)}>
       <Container>
         <p className={styles.copyright}>Tasker © {new Date().getFullYear()}</p>
       </Container>
