@@ -1,5 +1,6 @@
 import { routes } from '@/shared/config/routes';
 import { Chip, LinkButton } from '@/shared/ui';
+import { getPromotionFormat, promotionFormatLabels } from '../../model/format';
 import type { PromotionPreview } from '../../model/types';
 import styles from './PromotionCard.module.css';
 
@@ -9,14 +10,14 @@ interface PromotionCardProps {
 
 export function PromotionCard({ promotion }: PromotionCardProps) {
   const { id, address, companyName, title, description, reward } = promotion;
+  // Офлайн-задание показывает адрес, онлайн — метку «Онлайн», чтобы карточки были одной высоты.
+  const placeLabel = address?.trim() || promotionFormatLabels[getPromotionFormat(promotion)];
 
   return (
     <article className={styles.card}>
-      {address && (
-        <Chip variant="neutral" className={styles.address}>
-          {address}
-        </Chip>
-      )}
+      <Chip variant="neutral" className={styles.address}>
+        {placeLabel}
+      </Chip>
 
       <div className={styles.body}>
         <p className={styles.company}>{companyName}</p>
